@@ -66,9 +66,10 @@ def on_message(message):
             yield from client.send_message(message.channel, 'Código %s \n Nombre IUPAC: %s \n Fórmula: %s \n Peso: %s \n Carga: %s' % (i, i.iupac_name, i.molecular_formula, i.molecular_weight, i.charge) ) 
 #    elif "Tejos" or "Marisol" or "tejos" or "marisol" in message.content:
 #        yield from client.send_message(message.channel, "¡Ya me andan pelando!¡Yo que les he dado de todo!")
-    elif message.content.startswith('!r'):
-        yield from client.send_message(message.channel, dados.analizar(message.content[3:]))
     elif message.content.startswith('!rd'):
         yield from client.send_message(message.channel, dados.analizar(message.content[4:], mostrar = True))
+    elif message.content.startswith('!r'):
+        yield from client.send_message(message.channel, dados.analizar(message.content[3:]))
+
 
 client.run(token)
