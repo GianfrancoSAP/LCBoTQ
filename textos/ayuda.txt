@@ -4,3 +4,5 @@
 !terremoto: Predice un Terremoto
 !quim nombre "Nombre del compuesto": busca un químico en pubchem
 !cambios: Muestra los cambios en la última versión
+!r: Lanza dados con el formato NdX donde N es la cantidad de dados y X las caras, puede hacer operaciones (ej 1d6 + 2d8 - 5)
+!rd: Como !r pero devuelve el detalle, no solo el resultado
