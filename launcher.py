@@ -49,7 +49,13 @@ if verActual !=  verVirtual:
     destino = directorio + 'bot.py'
     with open(destino,'w') as file:
        file.write(archivo.text)
-              
+
+    url = repositorio + 'dados.py'
+    archivo = requests.get(url)
+    destino = directorio + 'dados.py'
+    with open(destino,'w') as file:
+       file.write(archivo.text)
+    
     os.system('python3 bot.py')
 
 elif verActual == verVirtual:
